@@ -10,11 +10,8 @@ function Navbar() {
                     <Link to='/home' className="text-2xl font-bold">Farmacia</Link>
 
                     <div className='flex gap-4'>
-                        Produtos
-                        Categorias
-                        Cadastrar categorias
-                        Perfil
-                        Sair
+                        <Link to='/temas' className='hover:underline'>Categorias</Link>
+                        <Link to='/cadastrartema' className='hover:underline'>Cadastrar Categoria</Link>
                     </div>
                 </div>
             </div>
