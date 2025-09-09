@@ -18,9 +18,7 @@ function FormCategoria() {
         try {
             await buscar(`/categorias/${id}`, setCategoria)
         } catch (error: any) {
-            if (error.toString().includes('403')) {
-                handleLogout()
-            }
+            if (error.toString().includes('403')) { }
         }
     }
     useEffect(() => {
@@ -49,9 +47,8 @@ function FormCategoria() {
                 await atualizar(`/categorias`, categoria, setCategoria)
                 alert('A Categoria foi atualizada com sucesso!')
             } catch (error: any) {
-                if (error.toString().includes('401')) {
-                    handleLogout();
-                } else {
+                if (error.toString().includes('401')) { }
+                else {
                     alert('Erro ao atualizar a categoeira.')
                 }
 
@@ -61,9 +58,7 @@ function FormCategoria() {
                 await cadastrar(`/categorias`, categoria, setCategoria)
                 alert('A Categoria foi cadastrada com sucesso!')
             } catch (error: any) {
-                if (error.toString().includes('401')) {
-                    handleLogout();
-                } 
+                if (error.toString().includes('401')) { }
                 else {
                     alert('Erro ao cadastrar a categoria.')
                 }
@@ -115,6 +110,4 @@ function FormCategoria() {
 
 export default FormCategoria;
 
-function handleLogout() {
-    throw new Error("Function not implemented.");
-}
+

@@ -25,9 +25,7 @@ function ListaCategoria() {
 
             await buscar('/categorias', setCategorias)
         } catch (error: any) {
-            if (error.toString().includes('401')) {
-                handleLogout()
-            }
+            if (error.toString().includes('401')) { }
         } finally {
             setIsLoading(false)
         }
@@ -68,7 +66,3 @@ function ListaCategoria() {
     )
 }
 export default ListaCategoria;
-
-function handleLogout() {
-    throw new Error("Function not implemented.");
-}
